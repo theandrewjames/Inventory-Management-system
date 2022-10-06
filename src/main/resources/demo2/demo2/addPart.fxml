@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo2.demo2.AddPartController">
+    <Label layoutX="48.0" layoutY="47.0" text="Add Part" />
+    <RadioButton fx:id="partIHradio" layoutX="150.0" layoutY="50.0" onAction="#onPartIH" selected="true" text="In-House">
+      <toggleGroup>
+         <ToggleGroup fx:id="partRadio" />
+      </toggleGroup></RadioButton>
+    <RadioButton fx:id="partOSradio" layoutX="300.0" layoutY="50.0" onAction="#OnPartOS" text="Outsourced" toggleGroup="$partRadio" />
+<Button fx:id="addPartSaveB" layoutX="400.0" layoutY="350.0" onAction="#addPartSave" text="Save">
+</Button>
+   <GridPane layoutX="100.0" layoutY="150.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Label text="ID" GridPane.halignment="CENTER" />
+         <Label text="Name" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+         <Label text="Inv" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+         <Label text="Price/Cost" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+         <Label layoutX="10.0" layoutY="107.0" text="Max" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+         <Label fx:id="addPartMachineId" layoutX="10.0" layoutY="137.0" text="Machine ID" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+         <TextField disable="true" promptText="Auto gen-Disabled" GridPane.columnIndex="1" />
+         <TextField fx:id="addPartNameTF" layoutX="110.0" layoutY="12.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <TextField fx:id="addPartInvTF" layoutX="110.0" layoutY="42.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <TextField fx:id="addPartPriceTF" layoutX="110.0" layoutY="72.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <TextField fx:id="addPartMaxTF" layoutX="110.0" layoutY="102.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <TextField fx:id="addPartMachineIDTF" layoutX="110.0" layoutY="132.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         <Label text="Min" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+         <TextField fx:id="addPartMinTF" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+      </children>
+   </GridPane>
+   <Button layoutX="450.0" layoutY="350.0" onAction="#ReturnHome" text="Cancel" />
+</AnchorPane>
